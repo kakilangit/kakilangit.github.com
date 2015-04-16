@@ -1,0 +1,15 @@
+# Site settings
+title: kakilangit
+email: theguywhodrinkscoffeeandcodes@gmail.com
+description: "Certified scuba diver, avid traveler, bookworm"
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://kakilangit.github.io" # the base hostname & protocol for your site
+twitter_username: kakilangit
+github_username:  kakilangit
+linkedin_username:  kakilangit
+
+# Build settings
+encoding: utf-8
+markdown: kramdown
+timezone: Asia/Jakarta
+highlighter: pygments
