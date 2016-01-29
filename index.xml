@@ -64,7 +64,7 @@
 &lt;pre&gt;&lt;code&gt;docker run mariadb
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;MariaDB akan berjalan di dalam container yang terisolasi. Bahkan jika bisa bertanya pada MariaDB sendiri, dia tak sadar berjalan di dalam Docker. Bahkan jika ingin menjalankan 20 instance MariaDB dalam satu mesin, cukup ketik &amp;lsquo;docker run mariadb&amp;rsquo; sebanyak 20 kali (gak kurang mas? kemarin aja Udin pesen 37).&lt;/p&gt;
+&lt;p&gt;MariaDB akan berjalan di dalam container yang terisolasi. Cobalah bertanya pada MariaDB yang baru diciptakan itu, dia pasti tak sadar dirinya berjalan di dalam Docker. Atau jika ingin menjalankan 20 instance MariaDB, cukup ketik &amp;lsquo;docker run mariadb&amp;rsquo; sebanyak 20 kali (gak kurang mas? kemarin aja Udin pesen 37), maka 20 instance MariaDB akan berjalan dalam hitungan detik. Dalam mesin yang sama.&lt;/p&gt;
 
 &lt;p&gt;Setiap proses akan memiliki port yang sama, karena terisolasi mereka tidak akan memiliki konflik atau bahkan dendam dengan proses yang lain, sampai mereka diperintahkan untuk membuka isolasi port itu. Alih-alih menjalankan &amp;lsquo;docker run&amp;rsquo; X kali, &lt;a href=&#34;https://docs.docker.com/compose/reference/docker-compose/&#34;&gt;docker-compose&lt;/a&gt; membuatnya lebih kece:&lt;/p&gt;
 
