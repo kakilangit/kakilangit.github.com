@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <meta property="og:title" content=" Docker &middot;  Da Vinci Coding" />
+  
+  <meta property="og:site_name" content="Da Vinci Coding" />
+  <meta property="og:url" content="https://kakilangit.github.io/docker/" />
+  
+  
+  <meta property="og:type" content="article" />
+  
+  <meta property="og:article:published_time" content="2016-01-29T09:33:04&#43;07:00" />
+  
+  
+
+  <title>
+     Docker &middot;  Da Vinci Coding
+  </title>
+
+  <link rel="stylesheet" href="https://kakilangit.github.io/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://kakilangit.github.io/css/main.css" />
+  <link rel="stylesheet" href="https://kakilangit.github.io/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://kakilangit.github.io/css/github.css" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" type="text/css">
+  <link rel="shortcut icon" href="https://kakilangit.github.io/images/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://kakilangit.github.io/images/apple-touch-icon.png" />
+  
+</head>
+<body>
+    <header class="global-header"  style="background-image:url( /images/bg.jpg )">
+    <section class="header-text">
+      <h1><a href="https://kakilangit.github.io/">Da Vinci Coding</a></h1>
+      
+      <div class="tag-line">
+        A Renaissance Artist Travels to the Future to Become Programmers
+      </div>
+      
+      <div class="sns-links hidden-print">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+      
+      <a href="https://kakilangit.github.io/" class="btn-header btn-back hidden-xs">
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+        &nbsp;Home
+      </a>
+      
+      
+    </section>
+  </header>
+  <main class="container">
+
+
+<article>
+  <header>
+    <h1 class="text-primary">Docker</h1>
+    <div class="post-meta clearfix">
+      <div class="post-date pull-left">
+        Posted on
+        <time datetime="2016-01-29T09:33:04&#43;07:00">
+          Jan 29, 2016
+        </time>
+      </div>
+      <div class="pull-right">
+        
+      </div>
+    </div>
+  </header>
+  <section>
+    
+
+<p>Sudah bosan mendengar kata <a href="https://www.docker.com/">Docker</a> sepanjang tahun 2015? Sayang sekali, karena dari skala hype Fantastic Four sampai Mad Max: Fury Road, tampaknya tahun ini Docker akan ada di tahap Star Wars: The Force Awakens.</p>
+
+<p><a href="https://twitter.com/eric_brewer">Eric Brewer</a>, engineer dari Google, berkata tentang keberadaan Docker, &ldquo;<em>Docker is next big thing, or already big thing</em>, teknologi pengembang perangkat lunak belum pernah sepesat dan semasif ini sejak framework Ruby on Rails delapan tahun yang lalu.&rdquo;</p>
+
+<p>Sebelum membahas apa itu Docker, inilah yang biasanya terjadi di proses pengembangan perangkat lunak (<em>software development</em>).</p>
+
+<p>Umumnya developer seperti kucing yang ingin mencoba sesuatu yang baru (ya, itu jelas termasuk kalian JavaScript developer, dengan terlalu banyak framework dan library, yang tiap tiga jam sekali mengubah API) maka tingkat ketergantungan pada software lain sangat tinggi.</p>
+
+<p>Dan sementara itu di bagian ops dan infra layaknya stupa di Borobudur, menyukai lingkungan yang cenderung statis, karena stabil berarti resiko bisa diukur dan yang penting bisa tidur tenang di malam hari dan di akhir pekan.</p>
+
+<p>Dan devops itu keahlian yang mahal, maka tak jarang ini terjadi:</p>
+
+<p><img src="http://cdn.memegenerator.net/instances/500x/22605665.jpg" alt="" /></p>
+
+<p>Di masa-masa genting itu Docker datang untuk mencegah bharatayuda antara developer dan ops/infra.</p>
+
+<h2 id="apa-itu-docker:69e60651f42783a7df723575c4088b5b">Apa itu Docker?</h2>
+
+<p>Dalam lima tahun ini komputasi makin murah dengan adanya <em>cloud computing</em>, komputasi ini pada dasarnya adalah mengambil sumber daya komputasi yang besar dan memecah-mecahnya dalam ukuran yang lebih kecil. Apapun bisa dibagi, mulai dari CPU, memori, sampai kapasitas penyimpanan.</p>
+
+<p>Teknologi yang digunakan biasanya adalah <em>virtual machine</em>. Satu mesin bisa membagi sumber daya dengan membuat mesin-mesin virtual yang lebih kecil di atasnya. Analoginya adalah kapal Blue Marlin yang memuat kapal-kapal kecil di atasnya.</p>
+
+<p><img src="https://images.vesseltracker.com/images/vessels/hires/Blue-Marlin-919860.jpg" alt="" /></p>
+
+<p><em>Cloud computing</em> adalah jodoh dari surga bagi ops/infra. Ops terbebas dari ritual memasukkan CD Slackware untuk menginstall server baru. Itu baru satu server, coba kalau <a href="http://www.datacenterknowledge.com/archives/2011/08/01/report-google-uses-about-900000-servers/">900.000</a>. Dengan teknologi <em>virtual machine</em>, ops membuat satu <em>image</em>, klak-klik, ketak-ketik, deploy, mau satu atau seratus bukan masalah asal limit kartu kreditnya cukup, 55 detik punya server(-server) baru.</p>
+
+<p>Apa yang dilakukan <em>virtual machine</em> selain berbagi sumber daya adalah isolasi, apa yang terjadi di mesin satu tidak akan merusak tatanan kehidupan rumah tangga mesin yang lain. Jika yang dilakukan <em>virtual machine</em> ada dalam ranah Sistem Operasi, maka yang dilakukan Docker ada di ranah aplikasi. Bayangkan kapal Marco Polo sebagai Docker host dan kontainer-kontainer yang diangkatnya adalah aplikasi.</p>
+
+<p><img src="http://www.thetimes.co.uk/tto/multimedia/archive/00364/VIDEO_MARCO_POLO_SH_364536a.jpg" alt="" /></p>
+
+<p>Docker berangkat dari <a href="https://github.com/opencontainers/runc">libcontainer</a> dan <a href="https://en.wikipedia.org/wiki/UnionFS">UnionFS</a> untuk menciptakan sistem pemaketan aplikasi dengan semua ketergantungannya ke dalam satu unit standar, Docker container. Docker container membungkus aplikasi dalam sistem berkas lengkap yang berisi semua yang diperlukan agar aplikasi itu berjalan: kode, runtime, system tools, dan libaries.</p>
+
+<p>Apapun yang bisa berjalan di server bisa dibungkus dalam Docker container.</p>
+
+<p>Contohnya adalah jika sebuah aplikasi yang membutuhkan ImageMagick tidak akan meminta dependency pada host tapi mencukupi dirinya sendiri dalam kontainer. Developer cukup bekerja pada kontainernya sendiri karena ia akan berjalan di manapun Docker host berada dan apapun sistem operasi servernya.</p>
+
+<p>Docker adalah jawaban tuhan server pada developer yang melepaskan tanggung jawab ketika aplikasi dijalankan di mesin produksi.</p>
+
+<p>Dengan pondasi ini lahirlah sistem operasi Linux generasi <em>cloud</em>, seperti <a href="https://coreos.com/">CoreOS</a>, <a href="http://rancher.com/rancher-os/">Rancher</a> yang sekecil upil dan tugas utamanya: menjadi tuan rumah bagi kontainer aplikasi.</p>
+
+<p>Karena Docker container berbagi kernel sistem operasi, mereka sangat cepat dan efisien dalam penggunaan memori. Sekali lagi, Docker sangat ringan dan cepat. Docker container adalah instance dari Docker image, dan Docker image punya satu proses utama yang akan berjalan saat Docker container dijalankan.</p>
+
+<p>Secepat apa? Punya waktu 3 detik dan ingin menjalankan MariaDB?</p>
+
+<pre><code>docker run mariadb
+</code></pre>
+
+<p>MariaDB akan berjalan di dalam container yang terisolasi. Bahkan jika bisa bertanya pada MariaDB sendiri, dia tak sadar berjalan di dalam Docker. Bahkan jika ingin menjalankan 20 instance MariaDB dalam satu mesin, cukup ketik &lsquo;docker run mariadb&rsquo; sebanyak 20 kali (gak kurang mas? kemarin aja Udin pesen 37).</p>
+
+<p>Setiap proses akan memiliki port yang sama, karena terisolasi mereka tidak akan memiliki konflik atau bahkan dendam dengan proses yang lain, sampai mereka diperintahkan untuk membuka isolasi port itu. Alih-alih menjalankan &lsquo;docker run&rsquo; X kali, <a href="https://docs.docker.com/compose/reference/docker-compose/">docker-compose</a> membuatnya lebih kece:</p>
+
+<pre><code>docker-compose scale=20 mariadb
+</code></pre>
+
+<p><img src="http://i.imgur.com/XWOuu8G.gif" alt="" /></p>
+
+<h3 id="arsitektur-docker:69e60651f42783a7df723575c4088b5b">Arsitektur Docker</h3>
+
+<p>Docker menggunakan arsitektur client dan server. Docker client berkomunikasi dengan Docker daemon yang akan membangun, menjalankan dan mendistribusikan Docker container.</p>
+
+<h4 id="docker-images:69e60651f42783a7df723575c4088b5b">Docker Images</h4>
+
+<p>Docker images pada dasarnya adalah sekumpulan file yang menyertakan apa saja yang dibutuhkan untuk membangun sebuah Docker container, termasuk sistem operasi, system tool, libraries, dan teman-temannya. Untuk membuat Docker images panggillah &lsquo;docker build&rsquo; pada sebuah file konfigurasi bernama Dockerfile.</p>
+
+<p>File ini biasanya terdiri beberapa baris yang berisi instruksi seperti FROM untuk mengambil dasar Docker images dari registry privat atau publik, RUN untuk menjalankan perintah, ADD dan COPY untuk yang berkaitan dengan file, ENV untuk mengeset variable env dan CMD untuk menjalankan proses. Tiap barisnya akan menciptakan layer dalam format UnionFS.</p>
+
+<h5 id="layer:69e60651f42783a7df723575c4088b5b">Layer</h5>
+
+<p>Docker images terdiri dari beberapa layer. Contohnya jika ingin menjalankan sebuah Django instance, maka bisa dimulai dengan menggunakan layer Debian, setelah itu layer libraries yang dibutuhkan Python dan Django, lalu layer Nginx, lalu layer aplikasi Django.</p>
+
+<p>Layer-layer yang sama bisa digunakan berulang-kali dan dipakai bersamaan. Jadi layer-layer Debian dan Nginx bisa dipakai ulang dan hanya menambahkan layer Flask atau Turbogears untuk Docker images yang berbeda.</p>
+
+<p>Karena itu juga Docker images sangat murah karena tak harus membangun ulang semuanya. Di sini perbedaan dengan <em>virtual machine</em> sangat kelihatan. Untuk membuat 10 server yang menjalankan MariaDB dibutuhkan bergiga-giga storage disk, sementara Docker hanya ada penambahan kecil di file data di setiap Docker container yang dijalankan.</p>
+
+<p>Docker memakai <em>copy-on-write</em>, yang berarti setiap Docker image menggunakan file yang sama sampai salah satu dari mereka mengganti sebuah file. Di titik itu, proses akan menyalin file dan menulis versinya sendiri. Ini juga berarti Docker image tidak terlalu sering menulisi disk ketika memulai sebuah proses. Itu yang menyebabkan Docker sangat cepat.</p>
+
+<p>Bahkan ada legenda sebuah Docker sudah menjalankan aplikasi sebelum developer mengetik &lsquo;docker run&rsquo;. <em>That&rsquo;s. Pretty. Damn. Fast</em></p>
+
+<h4 id="docker-container:69e60651f42783a7df723575c4088b5b">Docker Container</h4>
+
+<p>Jika Docker images adalah file make Docker container adalah direktori. Ia memiliki semua yang dibutuhkan sebuah aplikasi untuk berjalan. Docker container bisa di run, start, stop, move, dan delete. Docker container adalah bagian yang menjalankan aplikasi.</p>
+
+<h4 id="docker-registry:69e60651f42783a7df723575c4088b5b">Docker Registry</h4>
+
+<p>Docker registry menyimpan Docker images. Bisa bersifat privat atau publik. Docker menyediakan Docker registry publik default yang tersedia di <a href="https://hub.docker.com/">https://hub.docker.com/</a>.</p>
+
+<p><img src="https://docs.docker.com/engine/article-img/architecture.svg" alt="" /></p>
+
+<h2 id="jadi-apakah-seorang-developer-harus-mempelajari-docker:69e60651f42783a7df723575c4088b5b">Jadi apakah seorang developer harus mempelajari Docker?</h2>
+
+<p>Kalau dari saya sih iya, gak tahu kalo Mas Anang.</p>
+
+  </section>
+  <footer>
+    
+    <section class="author-info row">
+      <div class="author-avatar col-md-2">
+        
+      </div>
+      <div class="author-meta col-md-6">
+        
+        
+      </div>
+      
+    </section>
+    <ul class="pager">
+      
+      <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
+      
+      
+      <li class="next disabled"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
+      
+    </ul>
+  </footer>
+</article>
+
+  </main>
+  <footer class="container global-footer">
+    <div class="copyright-note pull-left">
+      &copy; 2016 kakilangit
+    </div>
+    <div class="sns-links hidden-print">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <script src="https://kakilangit.github.io/js/highlight.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  
+  
+</body>
+</html>
+
