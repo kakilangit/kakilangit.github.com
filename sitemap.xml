@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://kakilangit.github.io/</loc>
+    <loc>https://kakilangit.de/docker/</loc>
+    <lastmod>2016-01-29T09:33:04+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kakilangit.de/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kakilangit.de/</loc>
     <lastmod>2016-01-29T09:33:04+07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kakilangit.github.io/docker/</loc>
+    <loc>https://kakilangit.de/post/</loc>
     <lastmod>2016-01-29T09:33:04+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kakilangit.de/tags/</loc>
+    <priority>0</priority>
   </url>
   
 </urlset>
