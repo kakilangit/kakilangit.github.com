@@ -6,7 +6,7 @@
   <meta property="og:title" content=" Docker &middot;  Da Vinci Coding" />
   
   <meta property="og:site_name" content="Da Vinci Coding" />
-  <meta property="og:url" content="https://kakilangit.github.io/docker/" />
+  <meta property="og:url" content="https://kakilangit.de/docker/" />
   
   
   <meta property="og:type" content="article" />
@@ -19,19 +19,19 @@
      Docker &middot;  Da Vinci Coding
   </title>
 
-  <link rel="stylesheet" href="https://kakilangit.github.io/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://kakilangit.github.io/css/main.css" />
-  <link rel="stylesheet" href="https://kakilangit.github.io/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="https://kakilangit.github.io/css/github.css" />
+  <link rel="stylesheet" href="https://kakilangit.de/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://kakilangit.de/css/main.css" />
+  <link rel="stylesheet" href="https://kakilangit.de/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://kakilangit.de/css/github.css" />
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" type="text/css">
-  <link rel="shortcut icon" href="https://kakilangit.github.io/images/favicon.ico" />
-  <link rel="apple-touch-icon" href="https://kakilangit.github.io/images/apple-touch-icon.png" />
+  <link rel="shortcut icon" href="https://kakilangit.de/images/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://kakilangit.de/images/apple-touch-icon.png" />
   
 </head>
 <body>
     <header class="global-header"  style="background-image:url( /images/bg.jpg )">
     <section class="header-text">
-      <h1><a href="https://kakilangit.github.io/">Da Vinci Coding</a></h1>
+      <h1><a href="https://kakilangit.de/">Da Vinci Coding</a></h1>
       
       <div class="tag-line">
         A Renaissance Artist Travels to the Future to Become Programmers
@@ -47,10 +47,13 @@
   
   
   
+  
+  
+  
 </div>
 
       
-      <a href="https://kakilangit.github.io/" class="btn-header btn-back hidden-xs">
+      <a href="https://kakilangit.de/" class="btn-header btn-back hidden-xs">
         <i class="fa fa-angle-left" aria-hidden="true"></i>
         &nbsp;Home
       </a>
@@ -65,12 +68,14 @@
   <header>
     <h1 class="text-primary">Docker</h1>
     <div class="post-meta clearfix">
+    
       <div class="post-date pull-left">
         Posted on
         <time datetime="2016-01-29T09:33:04&#43;07:00">
           Jan 29, 2016
         </time>
       </div>
+    
       <div class="pull-right">
         
       </div>
@@ -95,7 +100,7 @@
 
 <p>Di masa-masa genting itu Docker datang untuk mencegah bharatayuda antara developer dan ops/infra.</p>
 
-<h2 id="apa-itu-docker:69e60651f42783a7df723575c4088b5b">Apa itu Docker?</h2>
+<h2 id="apa-itu-docker">Apa itu Docker?</h2>
 
 <p>Dalam lima tahun ini komputasi makin murah dengan adanya <em>cloud computing</em>, komputasi ini pada dasarnya adalah mengambil sumber daya komputasi yang besar dan memecah-mecahnya dalam ukuran yang lebih kecil. Apapun bisa dibagi, mulai dari CPU, memori, sampai kapasitas penyimpanan.</p>
 
@@ -135,17 +140,17 @@
 
 <p><img src="http://i.imgur.com/XWOuu8G.gif" alt="" /></p>
 
-<h3 id="arsitektur-docker:69e60651f42783a7df723575c4088b5b">Arsitektur Docker</h3>
+<h3 id="arsitektur-docker">Arsitektur Docker</h3>
 
 <p>Docker menggunakan arsitektur client dan server. Docker client berkomunikasi dengan Docker daemon yang akan membangun, menjalankan dan mendistribusikan Docker container.</p>
 
-<h4 id="docker-images:69e60651f42783a7df723575c4088b5b">Docker Images</h4>
+<h4 id="docker-images">Docker Images</h4>
 
 <p>Docker images pada dasarnya adalah sekumpulan file yang menyertakan apa saja yang dibutuhkan untuk membangun sebuah Docker container, termasuk sistem operasi, system tool, libraries, dan teman-temannya. Untuk membuat Docker images panggillah &lsquo;docker build&rsquo; pada sebuah file konfigurasi bernama Dockerfile.</p>
 
 <p>File ini biasanya terdiri beberapa baris yang berisi instruksi seperti FROM untuk mengambil dasar Docker images dari registry privat atau publik, RUN untuk menjalankan perintah, ADD dan COPY untuk yang berkaitan dengan file, ENV untuk mengeset variable env dan CMD untuk menjalankan proses. Tiap barisnya akan menciptakan layer dalam format UnionFS.</p>
 
-<h5 id="layer:69e60651f42783a7df723575c4088b5b">Layer</h5>
+<h5 id="layer">Layer</h5>
 
 <p>Docker images terdiri dari beberapa layer. Contohnya jika ingin menjalankan sebuah Django instance, maka bisa dimulai dengan menggunakan layer Debian, setelah itu layer libraries yang dibutuhkan Python dan Django, lalu layer Nginx, lalu layer aplikasi Django.</p>
 
@@ -157,22 +162,24 @@
 
 <p>Bahkan ada legenda sebuah Docker sudah menjalankan aplikasi sebelum developer mengetik &lsquo;docker run&rsquo;. <em>That&rsquo;s. Pretty. Damn. Fast</em></p>
 
-<h4 id="docker-container:69e60651f42783a7df723575c4088b5b">Docker Container</h4>
+<h4 id="docker-container">Docker Container</h4>
 
 <p>Jika Docker images adalah file make Docker container adalah direktori. Ia memiliki semua yang dibutuhkan sebuah aplikasi untuk berjalan. Docker container bisa di run, start, stop, move, dan delete. Docker container adalah bagian yang menjalankan aplikasi.</p>
 
-<h4 id="docker-registry:69e60651f42783a7df723575c4088b5b">Docker Registry</h4>
+<h4 id="docker-registry">Docker Registry</h4>
 
 <p>Docker registry menyimpan Docker images. Bisa bersifat privat atau publik. Docker menyediakan Docker registry publik default yang tersedia di <a href="https://hub.docker.com/">https://hub.docker.com/</a>.</p>
 
 <p><img src="https://docs.docker.com/engine/article-img/architecture.svg" alt="" /></p>
 
-<h2 id="jadi-apakah-seorang-developer-harus-mempelajari-docker:69e60651f42783a7df723575c4088b5b">Jadi apakah seorang developer harus mempelajari Docker?</h2>
+<h2 id="jadi-apakah-seorang-developer-harus-mempelajari-docker">Jadi apakah seorang developer harus mempelajari Docker?</h2>
 
 <p>Kalau dari saya sih iya, gak tahu kalo Mas Anang.</p>
 
   </section>
   <footer>
+    
+    
     
     <section class="author-info row">
       <div class="author-avatar col-md-2">
@@ -210,11 +217,14 @@
   
   
   
+  
+  
+  
 </div>
 
   </footer>
 
-  <script src="https://kakilangit.github.io/js/highlight.pack.js"></script>
+  <script src="https://kakilangit.de/js/highlight.pack.js"></script>
   <script>
     hljs.initHighlightingOnLoad();
   </script>
