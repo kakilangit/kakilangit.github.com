@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Da Vinci Coding</title>
-    <link>https://kakilangit.de/tags/</link>
+    <link>https://kakilangit.dev/tags/</link>
     <description>Recent content in Tags on Da Vinci Coding</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy; 2016 kakilangit</copyright>
     
-	<atom:link href="https://kakilangit.de/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kakilangit.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
