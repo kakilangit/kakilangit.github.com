@@ -6,7 +6,7 @@
   <meta property="og:title" content=" Docker &middot;  Da Vinci Coding" />
   
   <meta property="og:site_name" content="Da Vinci Coding" />
-  <meta property="og:url" content="https://kakilangit.de/docker/" />
+  <meta property="og:url" content="https://kakilangit.dev/docker/" />
   
   
   <meta property="og:type" content="article" />
@@ -19,19 +19,19 @@
      Docker &middot;  Da Vinci Coding
   </title>
 
-  <link rel="stylesheet" href="https://kakilangit.de/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://kakilangit.de/css/main.css" />
-  <link rel="stylesheet" href="https://kakilangit.de/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="https://kakilangit.de/css/github.css" />
+  <link rel="stylesheet" href="https://kakilangit.dev/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://kakilangit.dev/css/main.css" />
+  <link rel="stylesheet" href="https://kakilangit.dev/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://kakilangit.dev/css/github.css" />
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" type="text/css">
-  <link rel="shortcut icon" href="https://kakilangit.de/images/favicon.ico" />
-  <link rel="apple-touch-icon" href="https://kakilangit.de/images/apple-touch-icon.png" />
+  <link rel="shortcut icon" href="https://kakilangit.dev/images/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://kakilangit.dev/images/apple-touch-icon.png" />
   
 </head>
 <body>
     <header class="global-header"  style="background-image:url( /images/bg.jpg )">
     <section class="header-text">
-      <h1><a href="https://kakilangit.de/">Da Vinci Coding</a></h1>
+      <h1><a href="https://kakilangit.dev/">Da Vinci Coding</a></h1>
       
       <div class="tag-line">
         A Renaissance Artist Travels to the Future to Become Programmers
@@ -53,7 +53,7 @@
 </div>
 
       
-      <a href="https://kakilangit.de/" class="btn-header btn-back hidden-xs">
+      <a href="https://kakilangit.dev/" class="btn-header btn-back hidden-xs">
         <i class="fa fa-angle-left" aria-hidden="true"></i>
         &nbsp;Home
       </a>
@@ -96,7 +96,7 @@
 
 <p>Dan devops itu keahlian yang mahal, maka tak jarang ini terjadi:</p>
 
-<p><img src="https://res.cloudinary.com/kakilangit/image/upload/v1546336776/kakilangit.de/docker_0.jpg" alt="" /></p>
+<p><img src="https://i1.wp.com/kakilangit.com/wp-content/uploads/2019/03/kakilangit.dev_docker_0.jpg" alt="" /></p>
 
 <p>Di masa-masa genting itu Docker datang untuk mencegah bharatayuda antara developer dan ops/infra.</p>
 
@@ -106,13 +106,13 @@
 
 <p>Teknologi yang digunakan biasanya adalah <em>virtual machine</em>. Satu mesin bisa membagi sumber daya dengan membuat mesin-mesin virtual yang lebih kecil di atasnya. Analoginya adalah kapal Blue Marlin yang memuat kapal-kapal kecil di atasnya.</p>
 
-<p><img src="https://res.cloudinary.com/kakilangit/image/upload/v1546336776/kakilangit.de/docker_1.jpg" alt="" /></p>
+<p><img src="https://i1.wp.com/kakilangit.com/wp-content/uploads/2019/03/kakilangit.dev_docker_1.jpg" alt="" /></p>
 
 <p><em>Cloud computing</em> adalah jodoh dari surga bagi ops/infra. Ops terbebas dari ritual memasukkan CD Slackware setiap menginstall server baru. Itu baru satu server, coba kalau <a href="http://www.datacenterknowledge.com/archives/2011/08/01/report-google-uses-about-900000-servers/">900.000</a>. Dengan teknologi <em>virtual machine</em>, ops membuat satu <em>image</em>, klak-klik, ketak-ketik, deploy, mau satu atau seratus bukan masalah asal limit kartu kreditnya cukup, 55 detik punya server(-server) baru.</p>
 
 <p>Apa yang dilakukan <em>virtual machine</em> selain berbagi sumber daya adalah isolasi, apa yang terjadi di mesin satu tidak akan merusak tatanan kehidupan rumah tangga mesin yang lain. Jika yang dilakukan <em>virtual machine</em> ada dalam ranah Sistem Operasi, maka yang dilakukan Docker ada di ranah aplikasi. Bayangkan kapal Marco Polo sebagai Docker host dan kontainer-kontainer yang diangkatnya adalah aplikasi.</p>
 
-<p><img src="https://res.cloudinary.com/kakilangit/image/upload/v1546336776/kakilangit.de/docker_2.jpg" alt="" /></p>
+<p><img src="https://i1.wp.com/kakilangit.com/wp-content/uploads/2019/03/kakilangit.dev_docker_2.jpg" alt="" /></p>
 
 <p>Docker berangkat dari <a href="https://github.com/opencontainers/runc">libcontainer</a> dan <a href="https://en.wikipedia.org/wiki/UnionFS">UnionFS</a> untuk menciptakan sistem pemaketan aplikasi dengan semua ketergantungannya ke dalam satu unit standar, Docker container. Docker container membungkus aplikasi dalam sistem berkas lengkap yang berisi semua yang diperlukan agar aplikasi itu berjalan: kode, runtime, system tools, dan libaries.</p>
 
@@ -138,7 +138,7 @@
 <pre><code>docker-compose scale=20 mariadb
 </code></pre>
 
-<p><img src="https://res.cloudinary.com/kakilangit/image/upload/v1546336949/kakilangit.de/docker_3.gif" alt="" /></p>
+<p><img src="https://i1.wp.com/kakilangit.com/wp-content/uploads/2019/03/kakilangit.dev_docker_3.gif" alt="" /></p>
 
 <h3 id="arsitektur-docker">Arsitektur Docker</h3>
 
@@ -170,7 +170,7 @@
 
 <p>Docker registry menyimpan Docker images. Bisa bersifat privat atau publik. Docker menyediakan Docker registry publik default yang tersedia di <a href="https://hub.docker.com/">https://hub.docker.com/</a>.</p>
 
-<p><img src="https://res.cloudinary.com/kakilangit/image/upload/v1546336777/kakilangit.de/docker_4.jpg" alt="" /></p>
+<p><img src="https://i1.wp.com/kakilangit.com/wp-content/uploads/2019/03/kakilangit.dev_docker_4.jpg" alt="" /></p>
 
 <h2 id="jadi-apakah-seorang-developer-harus-mempelajari-docker">Jadi apakah seorang developer harus mempelajari Docker?</h2>
 
@@ -224,7 +224,7 @@
 
   </footer>
 
-  <script src="https://kakilangit.de/js/highlight.pack.js"></script>
+  <script src="https://kakilangit.dev/js/highlight.pack.js"></script>
   <script>
     hljs.initHighlightingOnLoad();
   </script>
