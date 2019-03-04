@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Da Vinci Coding</title>
-    <link>https://kakilangit.dev/</link>
+    <link>https://etc.kakilangit.dev/</link>
     <description>Recent content on Da Vinci Coding</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy; 2016 kakilangit</copyright>
     <lastBuildDate>Fri, 29 Jan 2016 09:33:04 +0700</lastBuildDate>
     
-	<atom:link href="https://kakilangit.dev/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://etc.kakilangit.dev/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Docker</title>
-      <link>https://kakilangit.dev/docker/</link>
+      <link>https://etc.kakilangit.dev/docker/</link>
       <pubDate>Fri, 29 Jan 2016 09:33:04 +0700</pubDate>
       
-      <guid>https://kakilangit.dev/docker/</guid>
+      <guid>https://etc.kakilangit.dev/docker/</guid>
       <description>Sudah bosan mendengar kata Docker sepanjang tahun 2015? Sayang sekali, karena dari skala hype Fantastic Four sampai Mad Max: Fury Road, tampaknya tahun ini Docker akan ada di tahap Captain America: Civil War.
 Eric Brewer, engineer dari Google, berkata tentang keberadaan Docker, &amp;ldquo;teknologi pengembang perangkat lunak belum pernah sepesat dan semasif ini sejak framework Ruby on Rails delapan tahun yang lalu.&amp;rdquo;
 Sebelum membahas apa itu Docker, inilah yang biasanya terjadi di proses pengembangan perangkat lunak (software development).</description>

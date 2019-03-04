@@ -3,29 +3,29 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://kakilangit.dev/docker/</loc>
+    <loc>https://etc.kakilangit.dev/docker/</loc>
     <lastmod>2016-01-29T09:33:04+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kakilangit.dev/categories/</loc>
+    <loc>https://etc.kakilangit.dev/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kakilangit.dev/</loc>
-    <lastmod>2016-01-29T09:33:04+07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://kakilangit.dev/post/</loc>
+    <loc>https://etc.kakilangit.dev/</loc>
     <lastmod>2016-01-29T09:33:04+07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kakilangit.dev/tags/</loc>
+    <loc>https://etc.kakilangit.dev/post/</loc>
+    <lastmod>2016-01-29T09:33:04+07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://etc.kakilangit.dev/tags/</loc>
     <priority>0</priority>
   </url>
   
